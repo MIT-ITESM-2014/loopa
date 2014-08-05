@@ -25,12 +25,11 @@ var loopa = {
   },
   config: {
     cloudmade: {
-      endpoint: "http://{s}.tile.cloudmade.com",
-      api_key: "82657b936bb44375b3e137120221986d",
-      style_id: 86873,
+      endpoint: "https://{s}.tiles.mapbox.com/v3/",
+      map_id: "mit.ig2gb74f",
       tile_size: 256,
       layer_url: function() {
-        return this.endpoint + '/' + this.api_key + '/' + this.style_id + '/' + this.tile_size + "/{z}/{x}/{y}.png";
+        return this.endpoint + this.map_id + "/{z}/{x}/{y}.png";
       }
     },
     colour_ranges: {
